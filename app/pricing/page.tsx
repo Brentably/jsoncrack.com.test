@@ -1,5 +1,5 @@
 import React from "react";
-import Head from "next/head";
+import { Metadata } from "next/head";
 import { Flex, Stack, Button, List, ThemeIcon, Divider, Text, Paper, Badge } from "@mantine/core";
 import { AiOutlineInfoCircle } from "react-icons/ai";
 import { BsCheck, BsX } from "react-icons/bs";
@@ -9,9 +9,9 @@ import Layout from "src/layout/Layout";
 const Pricing = () => {
   return (
     <Layout>
-      <Head>
+      <Metadata>
         <title>Pricing - JSON Crack</title>
-      </Head>
+      </Metadata>
       <Flex gap="lg" wrap="wrap" justify="center" my={60} w="fit-content" p="lg" mx="auto">
         <Paper p="xl" radius="lg" shadow="lg" withBorder w={325}>
           <Flex justify="space-between">

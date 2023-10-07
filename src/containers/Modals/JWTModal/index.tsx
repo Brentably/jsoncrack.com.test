@@ -1,3 +1,4 @@
+'use client'
 import React from "react";
 import { Stack, Modal, Button, ModalProps, Textarea } from "@mantine/core";
 import { decode } from "jsonwebtoken";

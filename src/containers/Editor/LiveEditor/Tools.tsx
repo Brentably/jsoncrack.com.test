@@ -1,3 +1,4 @@
+'use client'
 import React from "react";
 import styled from "styled-components";
 import { Badge, Flex, Group, MediaQuery, Menu, Select, Text } from "@mantine/core";

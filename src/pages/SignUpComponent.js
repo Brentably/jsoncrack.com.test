@@ -1,5 +1,6 @@
+'use client'
 import React from "react";
-import Head from "next/head";
+import { Metadata } from "@nextjs/metadata";
 import Link from "next/link";
 import {
   Anchor,
@@ -18,7 +19,7 @@ import { AiOutlineGithub, AiOutlineGoogle } from "react-icons/ai";
 import Layout from "src/layout/Layout";
 import { supabase } from "src/lib/api/supabase";
 
-const SignUp = () => {
+const SignUpComponent = () => {
   const [loading, setLoading] = React.useState(false);
   const [done, setDone] = React.useState(false);
   const [userData, setUserData] = React.useState({
@@ -56,9 +57,9 @@ const SignUp = () => {
 
   return (
     <Layout>
-      <Head>
-        <title>JSON Crack | Sign Up</title>
-      </Head>
+      <Metadata>
+  <title>JSON Crack | Sign Up</title>
+</Metadata>
       {done ? (
         <Paper shadow="xs" mx="auto" maw={400} mt={50} p="lg" withBorder>
           <Text align="center" mt="lg">
@@ -164,4 +165,4 @@ const SignUp = () => {
   );
 };
 
-export default SignUp;
+export default SignUpComponent;

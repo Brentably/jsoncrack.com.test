@@ -1,8 +1,7 @@
 import { NodeData, EdgeData } from "src/types/models";
+import { getParentsForNodeId } from "reaflow";
 
 export function getNodePath(nodes: NodeData[], edges: EdgeData[], nodeId: string) {
-  const { getParentsForNodeId } = require("reaflow");
-
   let resolvedPath = "";
   const parentIds = getParentsForNodeId(nodes, edges, nodeId).map(n => n.id);
   const path = parentIds.reverse().concat(nodeId);

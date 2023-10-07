@@ -1,3 +1,4 @@
+'use client'
 import React from "react";
 import dynamic from "next/dynamic";
 import Head from "next/head";
@@ -271,7 +272,7 @@ const HeroBottom = () => (
   </Container>
 );
 
-export const HomePage = () => {
+export const HomePageComponent = () => {
   const [ads, setAds] = React.useState(false);
 
   return (
@@ -290,4 +291,4 @@ export const HomePage = () => {
   );
 };
 
-export default HomePage;
+export default HomePageComponent;

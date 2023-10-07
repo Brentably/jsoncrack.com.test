@@ -1,3 +1,4 @@
+'use client'
 import debounce from "lodash.debounce";
 import _get from "lodash.get";
 import _set from "lodash.set";

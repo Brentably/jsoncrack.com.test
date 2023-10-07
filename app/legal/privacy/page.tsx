@@ -1,14 +1,14 @@
 import React from "react";
-import Head from "next/head";
+import { Metadata } from "@nextjs/metadata";
 import { Anchor, Container, Paper, Stack, Text, Title } from "@mantine/core";
 import Layout from "src/layout/Layout";
 
 const Privacy = () => {
   return (
     <Layout>
-      <Head>
+      <Metadata>
         <title>Privacy Policy - JSON Crack</title>
-      </Head>
+      </Metadata>
       <Container my={50} size="sm">
         <Paper bg="transparent">
           <Title>Privacy Policy</Title>

@@ -1,6 +1,7 @@
+'use client'
 import React from "react";
 import dynamic from "next/dynamic";
-import Head from "next/head";
+import { Metadata } from "next/head";
 import { useRouter } from "next/router";
 import styled from "styled-components";
 import { BottomBar } from "src/containers/Editor/BottomBar";
@@ -27,7 +28,7 @@ export const StyledEditorWrapper = styled.div`
   overflow: hidden;
 `;
 
-const EditorPage: React.FC = () => {
+const EditorPageComponent: React.FC = () => {
   const { query, isReady } = useRouter();
   const checkEditorSession = useFile(state => state.checkEditorSession);
   const loading = useJson(state => state.loading);
@@ -42,10 +43,10 @@ const EditorPage: React.FC = () => {
   return (
     <EditorWrapper>
       <StyledEditorWrapper>
-        <Head>
-          <title>Editor | JSON Crack</title>
-          {hasQuery && <meta name="robots" content="noindex,nofollow" />}
-        </Head>
+        <Metadata>
+  <title>Editor | JSON Crack</title>
+  {hasQuery && <meta name="robots" content="noindex,nofollow" />}
+</Metadata>
         <StyledPageWrapper>
           <Tools />
           <StyledEditorWrapper>
@@ -58,4 +59,4 @@ const EditorPage: React.FC = () => {
   );
 };
 
-export default EditorPage;
+export default EditorPageComponent;

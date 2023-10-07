@@ -1,3 +1,4 @@
+'use client'
 import React from "react";
 import { Stack, Modal, Button, ModalProps, Text, Anchor, Group } from "@mantine/core";
 import Editor from "@monaco-editor/react";

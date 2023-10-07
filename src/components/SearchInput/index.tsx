@@ -1,3 +1,4 @@
+'use client'
 import React from "react";
 import { Flex, Input, Text } from "@mantine/core";
 import { getHotkeyHandler } from "@mantine/hooks";

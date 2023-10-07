@@ -1,12 +1,13 @@
+'use client'
 import React from "react";
-import Head from "next/head";
+import { Metadata } from "@nextjs/metadata";
 import Link from "next/link";
 import { Button, Group, Paper, Stack, TextInput, Text, Anchor } from "@mantine/core";
 import { toast } from "react-hot-toast";
 import Layout from "src/layout/Layout";
 import { supabase } from "src/lib/api/supabase";
 
-const ForgotPassword = () => {
+const ForgotPasswordComponent = () => {
   const [loading, setLoading] = React.useState(false);
   const [email, setEmail] = React.useState("");
   const [success, setSuccess] = React.useState(false);
@@ -25,10 +26,10 @@ const ForgotPassword = () => {
 
   return (
     <Layout>
-      <Head>
-        <title>Reset Password - JSON Crack</title>
-        <meta name="robots" content="noindex,nofollow" />
-      </Head>
+      <Metadata>
+  <title>Reset Password - JSON Crack</title>
+  <meta name="robots" content="noindex,nofollow" />
+</Metadata>
       <Paper mx="auto" mt={70} maw={400} p="lg" withBorder>
         <Text size="lg" weight={500}>
           Reset Password
@@ -67,4 +68,4 @@ const ForgotPassword = () => {
   );
 };
 
-export default ForgotPassword;
+export default ForgotPasswordComponent;

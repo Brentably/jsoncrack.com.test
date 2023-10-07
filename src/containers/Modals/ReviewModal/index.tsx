@@ -1,3 +1,4 @@
+'use client'
 import React from "react";
 import { Button, Modal, ModalProps, Rating, Text, Textarea } from "@mantine/core";
 import { toast } from "react-hot-toast";

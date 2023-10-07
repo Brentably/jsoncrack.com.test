@@ -1,3 +1,4 @@
+'use client'
 import React from "react";
 import { useDebouncedValue } from "@mantine/hooks";
 import { searchQuery, cleanupHighlight, highlightMatchedNodes } from "src/lib/utils/graph/search";

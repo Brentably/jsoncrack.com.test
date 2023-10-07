@@ -1,3 +1,4 @@
+'use client'
 import React from "react";
 import { Modal, Group, Switch, Stack, ModalProps } from "@mantine/core";
 // import { VscLock } from "react-icons/vsc";

@@ -1,3 +1,4 @@
+'use client'
 import React from "react";
 import type { AppProps } from "next/app";
 import dynamic from "next/dynamic";
@@ -28,7 +29,7 @@ const mantineTheme: MantineThemeOverride = {
   primaryShade: 8,
 };
 
-function JsonCrack({
+function JsonCrackComponent({
   Component,
   pageProps,
 }: AppProps<{
@@ -85,4 +86,4 @@ function JsonCrack({
   );
 }
 
-export default JsonCrack;
+export default JsonCrackComponent;

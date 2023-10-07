@@ -1,3 +1,4 @@
+'use client'
 import React from "react";
 import { useRouter } from "next/router";
 import { Modal, Group, Button, Text, Divider, ModalProps } from "@mantine/core";

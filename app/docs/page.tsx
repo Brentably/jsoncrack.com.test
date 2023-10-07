@@ -40,10 +40,10 @@ const StyledHighlight = styled.span<{ $link?: boolean; $alert?: boolean }>`
 const Docs = () => {
   return (
     <Layout>
-      <Head>
-        <title>Documentation - JSON Crack</title>
-        <meta name="description" content="Embedding JSON Crack tutorial into your websites." />
-      </Head>
+      <Metadata>
+  <title>Documentation - JSON Crack</title>
+  <meta name="description" content="Embedding JSON Crack tutorial into your websites." />
+</Metadata>
       <Stack mx="auto" maw="75%">
         <Group mb="lg" mt={40}>
           <Title order={1} color="dark">

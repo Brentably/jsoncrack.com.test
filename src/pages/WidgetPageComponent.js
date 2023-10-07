@@ -1,6 +1,7 @@
+'use client'
 import React from "react";
 import dynamic from "next/dynamic";
-import Head from "next/head";
+import { Metadata } from "next/document";
 import { useRouter } from "next/router";
 import { ThemeProvider } from "styled-components";
 import toast from "react-hot-toast";
@@ -21,7 +22,7 @@ const Graph = dynamic(() => import("src/components/Graph").then(c => c.Graph), {
   ssr: false,
 });
 
-const WidgetPage = () => {
+const WidgetPageComponent = () => {
   const { query, push, isReady } = useRouter();
   const [theme, setTheme] = React.useState("dark");
   const checkEditorSession = useFile(state => state.checkEditorSession);
@@ -59,9 +60,9 @@ const WidgetPage = () => {
 
   return (
     <EditorWrapper>
-      <Head>
+      <Metadata>
         <meta name="robots" content="noindex,nofollow" />
-      </Head>
+      </Metadata>
       <ThemeProvider theme={theme === "dark" ? darkTheme : lightTheme}>
         <Tools isWidget />
         <Graph isWidget />
@@ -70,4 +71,4 @@ const WidgetPage = () => {
   );
 };
 
-export default WidgetPage;
+export default WidgetPageComponent;

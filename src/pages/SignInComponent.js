@@ -1,3 +1,4 @@
+'use client'
 import React from "react";
 import Head from "next/head";
 import Link from "next/link";
@@ -180,7 +181,7 @@ function ResetPassword(props: PaperProps) {
   );
 }
 
-const SignIn = () => {
+const SignInComponent = () => {
   const { isReady, push, query } = useRouter();
   const session = useSession();
   const isPasswordReset = query?.type === "recovery" && !query?.error;
@@ -207,4 +208,4 @@ const SignIn = () => {
   );
 };
 
-export default SignIn;
+export default SignInComponent;

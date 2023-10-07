@@ -1,3 +1,4 @@
+'use client'
 import React from "react";
 import styled from "styled-components";
 import { Modal, Group, Button, TextInput, Stack, Divider, ModalProps } from "@mantine/core";

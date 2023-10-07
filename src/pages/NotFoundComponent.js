@@ -1,11 +1,12 @@
+'use client'
 import React from "react";
-import Head from "next/head";
+import { Metadata } from "next/head";
 import { useRouter } from "next/router";
 import styled from "styled-components";
 import { Button, Text, Title } from "@mantine/core";
 import Layout from "src/layout/Layout";
 
-const StyledNotFound = styled.div`
+const StyledNotFoundComponent = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
@@ -31,15 +32,15 @@ const StyledImageWrapper = styled.div`
   width: 300px;
 `;
 
-const NotFound: React.FC = () => {
+const NotFoundComponent: React.FC = () => {
   const router = useRouter();
 
   return (
     <Layout>
-      <Head>
+      <Metadata>
         <meta name="robots" content="noindex,nofollow" />
-      </Head>
-      <StyledNotFound>
+      </Metadata>
+      <StyledNotFoundComponent>
         <StyledImageWrapper>
           <img src="/assets/404.svg" alt="not found" width={300} height={400} />
         </StyledImageWrapper>
@@ -48,9 +49,9 @@ const NotFound: React.FC = () => {
         <Button mt="lg" size="lg" type="button" onClick={() => router.push("/")}>
           Go Home
         </Button>
-      </StyledNotFound>
+      </StyledNotFoundComponent>
     </Layout>
   );
 };
 
-export default NotFound;
+export default NotFoundComponent;

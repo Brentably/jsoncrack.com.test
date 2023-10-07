@@ -1,5 +1,5 @@
 import React from "react";
-import Head from "next/head";
+import { Metadata } from "next/head";
 import { Button, Center, Container, Grid, Image, Text, Title } from "@mantine/core";
 import { VscHeart } from "react-icons/vsc";
 import Layout from "src/layout/Layout";
@@ -7,9 +7,9 @@ import Layout from "src/layout/Layout";
 const Oss: React.FC<{ sponsors: any[] }> = ({ sponsors }) => {
   return (
     <Layout>
-      <Head>
+      <Metadata>
         <title>Open Source Supporters - JSON Crack</title>
-      </Head>
+      </Metadata>
       <Container pt={60}>
         <Image mx="auto" src="assets/oss_banner.webp" radius="md" maw={800} alt="oss banner" />
       </Container>
@@ -59,12 +59,13 @@ const Oss: React.FC<{ sponsors: any[] }> = ({ sponsors }) => {
 export default Oss;
 
 export async function getStaticProps() {
-  const res = await fetch("https://ghs.vercel.app/sponsors/aykutsarac");
+  const res = await fetch("https://ghs.vercel.app/sponsors/aykutsarac", { cache: 'force-cache' });
   const data = await res.json();
 
   return {
     props: {
       sponsors: data?.sponsors.reverse() || [],
     },
+    revalidate: 10
   };
 }
